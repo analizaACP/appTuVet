@@ -41,9 +41,9 @@ if(isset($_POST['submit']))
     else{
         $sumainv=0;
     }
-    $imagen = pg_escape_bytea(file_get_contents($_FILES['imagen']['tmp_name']));
+    //$imagen = pg_escape_bytea(file_get_contents($_FILES['imagen']['tmp_name']));
     
-    $Imagen01=addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+   // $Imagen01=addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
     
     
     $query=("INSERT INTO productos(prod_codbarra, prod_nombre,id_marca,id_categorias,prod_compraminima,
@@ -113,12 +113,12 @@ if(isset($_POST['submit']))
         echo "<script>alert('punto de reorden actualizado para esta sucursal');</script>";
     }
     
-    if($consulta04){
-        echo "<script>alert('producto creado para todas las sucursales');</script>";
-    }
+   // if($consulta04){
+     //   echo "<script>alert('producto creado para todas las sucursales');</script>";
+    //}
     
     //guardar la foto del producto en mysql
-    
+    /*
     $servername = "localhost";
     $username = "adolfo";
     $password = "ofloda01";
@@ -144,7 +144,7 @@ if(isset($_POST['submit']))
     $consultafoto = "INSERT INTO imagenes (nombre, imagen) VALUES ('$codbarra','$Imagen01')";
     $ejecutarfoto=$conn->query($consultafoto);
     
-    
+    */
     
     echo "<script>window.location.href='productos.php'</script>";
     
@@ -338,14 +338,14 @@ if(isset($_GET['mostrar']))
 														</div>
 											<!-- termina seleccionar la categoria del producto -->	
 											
-											<div class="form-group">
+											<!--  <div class="form-group">
 															<label>
 																Imagen del producto
 															</label>
 							<input id="imagen" type="file" name="imagen" required>
 														</div>
 											
-											
+											-->
 											
 											
 											<div class="form-group">
@@ -490,8 +490,8 @@ while($row = pg_fetch_object($sql))
 						<a href="productos.php?id=<?php echo $row->id?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"
 	                   class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" tooltip="Remove"><i class="fa fa-times fa fa-white"></i></a>
 	                   
-	                   <a href="productos.php?id=<?php echo $row->prod_codbarra;?>&mostrar " class="btn btn-transparent btn-xs" 
-												tooltip-placement="top" tooltip="Pict"><i class="fa fa-file-image-o" aria-hidden="true"></i></a>
+	                   <!--<a href="productos.php?id=<?php echo $row->prod_codbarra;?>&mostrar " class="btn btn-transparent btn-xs" 
+												tooltip-placement="top" tooltip="Pict"><i class="fa fa-file-image-o" aria-hidden="true"></i></a>-->
 	                   
 	                   
 	                   
@@ -631,7 +631,7 @@ $cnt=$cnt+1;
       </div>
    <div class="modal-body">
 <?php
-echo $_REQUEST['id'];
+/*echo $_REQUEST['id'];
 
 // Establecer una conexión a la base de datos MySQL
 $servername = "localhost";
@@ -661,6 +661,7 @@ while ($row = $result->fetch_assoc()) {
 
 // Cierra la conexión
 $conn->close();
+*/
 ?>
 
 

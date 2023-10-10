@@ -204,8 +204,8 @@ while($row = pg_fetch_object($sql))
 												<div class="visible-md visible-lg hidden-sm hidden-xs">
 												
 							
-	                   <a href="inventario_sucursal.php?id=<?php echo $row->prod_codbarra;?>&mostrar " class="btn btn-transparent btn-xs" 
-												tooltip-placement="top" tooltip="Pict"><i class="fa fa-file-image-o" aria-hidden="true"></i></a>
+	                  <!--   <a href="inventario_sucursal.php?id=<?php echo $row->prod_codbarra;?>&mostrar " class="btn btn-transparent btn-xs" 
+												tooltip-placement="top" tooltip="Pict"><i class="fa fa-file-image-o" aria-hidden="true"></i></a> -->
 	                   
 	                   
 	                   
@@ -345,6 +345,7 @@ $cnt=$cnt+1;
       </div>
    <div class="modal-body">
 <?php
+/*
 echo $_REQUEST['id'];
 
 // Establecer una conexión a la base de datos MySQL
@@ -375,6 +376,7 @@ while ($row = $result->fetch_assoc()) {
 
 // Cierra la conexión
 $conn->close();
+*/
 ?>
 
 

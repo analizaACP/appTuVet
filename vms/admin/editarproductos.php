@@ -79,7 +79,7 @@ if(isset($_POST['submit']))
     //echo $_SESSION['sucursal'];
     
     
-    
+    /*
     $servername = "localhost";
     $username = "adolfo";
     $password = "ofloda01";
@@ -108,7 +108,7 @@ if(isset($_POST['submit']))
         
         // Cerrar la conexión
         $conn->close();
-    } 
+    } */
     
     
     echo "<script>alert('Datos actualizados');</script>";
@@ -244,12 +244,12 @@ $id=intval($_GET['id']);
 	
 	</div>		
 	
-							<div class="form-group">
+							<!-- <div class="form-group"> 
 															<label>
 																Imagen del producto
 															</label>
 							<input id="imagen" type="file" name="imagen" >
-														</div>								
+														 </div> -->								
 										
 	<div class="form-group">
 	
